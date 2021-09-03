@@ -19,13 +19,26 @@ const printTask = (task: Task): void => {
 };
 
 // Object that statisfies both the interfaces
-const TodoOrTask = {
+const TodoOrTask1 = {
   id: 1,
   name: "TestTask",
   complete: true,
 };
 
 // TodoOrTask can be called for print Todo
-printTodo(TodoOrTask);
+printTodo(TodoOrTask1);
 // TodoOrTask can be called for print Task as well
-printTask(TodoOrTask);
+printTask(TodoOrTask1);
+
+// Otherway round won't work as
+// object should have all the properties defined in the type
+// so below object doesn't qualifies as a TODO
+const TodoOrTask2 = {
+  name: "TestTask",
+};
+
+// TodoOrTask2 doesn't qualify as TODO
+//printTodo(TodoOrTask2);
+
+// TodoOrTask can be called for print Task as well
+printTask(TodoOrTask2);

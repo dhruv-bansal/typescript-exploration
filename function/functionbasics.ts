@@ -4,6 +4,14 @@ const arrowFunction = (a: number, b: number): number => {
   return a * b;
 };
 
+//  both are same
+// const arrowFunction: (a: number, b: number) => number = (
+//   a: number,
+//   b: number
+// ): number => {
+//   return a * b;
+// };
+
 // normal function
 function fnWithFnKeyword(a: number, b: number): number {
   return a * b;
@@ -14,7 +22,10 @@ const anonymousFunction = function (a: number, b: number): number {
   return a * b;
 };
 
+console.log(arrowFunction(2, 3) === fnWithFnKeyword(2, 3));
 console.assert(arrowFunction(2, 3) === fnWithFnKeyword(2, 3));
+
+console.log(fnWithFnKeyword(2, 3) === anonymousFunction(2, 3));
 console.assert(fnWithFnKeyword(2, 3) === anonymousFunction(2, 3));
 
 /**********  return type of function void versus undefined **/
@@ -25,7 +36,7 @@ const returnVoid = (str: String): void => {
 // with return type void we can return null or undefined
 const returnVoidWithNull = (str: String): void => {
   console.log(str);
-  return null;
+  // return null;
 };
 const returnVoidWithUndefined = (str: String): void => {
   console.log(str);
@@ -54,9 +65,9 @@ const logWeather = (forecast: { date: Date; weather: String }): void => {
 };
 
 // Es2015 destructring
-const logWeatherES2015 = ({ date, weather }) => {
-  console.log(date, "  ", weather);
-};
+// const logWeatherES2015 = ({ date, weather }) => {
+//   console.log(date, "  ", weather);
+// };
 
 // destructing in typescript
 const logWeatherDestructed = ({
