@@ -106,3 +106,7 @@ dist
 #webstrom
 *.iml
 modules.xml
+package.json
+.gitignore
+.gitignore
+package-lock.json
