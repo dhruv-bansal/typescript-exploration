@@ -110,3 +110,4 @@ package.json
 .gitignore
 .gitignore
 package-lock.json
+/.idea/vcs.xml
